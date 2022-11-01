@@ -1,0 +1,29 @@
+<div id="section2" class="about-us-container">
+  <div class="about-us-wrapper">
+    <div class="about-us-inner-container">
+      <div class="grid grid-cols-4 gap-4 w-full">
+        <div class="col-span-1 flex items-center">
+          <p class="text-5xl col-span-1 text-white">Biz Kimiz?</p>
+        </div>
+        <div class="col-span-3">
+          <cdk-accordion class="about-us-accordion">
+            <cdk-accordion-item *ngFor="let item of accordions; let index = index;" #accordionItem="cdkAccordionItem"
+              class="about-us-accordion-item" role="button" tabindex="0" [attr.id]="'accordion-header-' + index"
+              [attr.aria-expanded]="accordionItem.expanded" [attr.aria-controls]="'accordion-body-' + index">
+              <div class="about-us-accordion-item-header" (click)="accordionItem.toggle()">
+                {{ item.title }}
+              </div>
+              <div class="about-us-accordion-item-body" role="region"
+                [style.display]="accordionItem.expanded ? '' : 'none'" [attr.id]="'accordion-body-' + index"
+                [attr.aria-labelledby]="'accordion-header-' + index" [innerHTML]="item.text">
+              </div>
+            </cdk-accordion-item>
+          </cdk-accordion>
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+</div>

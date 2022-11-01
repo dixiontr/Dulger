@@ -1,0 +1,48 @@
+.about-us-container{
+  @apply w-full h-screen  bg-about-us-image bg-center bg-no-repeat bg-cover
+}
+.about-us-wrapper {
+  @apply w-full h-full bg-white bg-opacity-60 flex justify-center place-items-center
+}
+.about-us-inner-container
+{
+  @apply w-3/4 h-3/4 flex justify-center place-items-center flex-col bg-black bg-opacity-50 px-20 py-8
+}
+.about-us-accordion {
+  @apply block w-full text-white
+}
+
+
+.about-us-accordion-item {
+  @apply block border-solid border-white
+}
+
+.about-us-accordion-item + .about-us-accordion-item {
+  @apply border-t-0
+}
+
+.about-us-accordion-item-header {
+  @apply flex place-items-center justify-center text-2xl
+}
+
+.about-us-accordion-item-description {
+  @apply  text-white
+
+}
+
+.about-us-accordion-item-header,
+.about-us-accordion-item-body {
+  @apply p-4
+}
+
+.about-us-accordion-item-header:hover {
+  @apply cursor-pointer bg-gray-300
+}
+
+.about-us-accordion-item:first-child {
+  @apply rounded-tl rounded-tr
+}
+
+.about-us-accordion-item:last-child {
+  @apply rounded-tl rounded-tr
+}
